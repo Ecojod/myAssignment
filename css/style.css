@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    max-width: 1166px;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    height: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 3rem;
+    transition: all .3s ease;
+}
+
+.navbar .left h1{
+    font-weight: 400;
+}
+.navbar .left img{
+    width: 120px;
+    padding: 6px 14px;
+    align-items: center;
+}
+
+.navbar .right{
+    display: flex;
+    column-gap: 3rem;
+    align-items: center;
+    transition: all .3s ease;
+}
+
+.navbar .openMenu, .navbar .closeMenu{
+    display: none;
+}
+
+
+.navbar .right ul{
+    display: flex;
+
+    column-gap: 3rem;
+}
+
+.navbar .right ul li{
+    list-style-type: none;
+}
+
+a:hover{
+    color: #666;
+}
+
+
+.nav-btns {
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-btns button{
+    background: none;
+    padding: 5px;
+    border: none;
+}
+
+section.card-details {
+    margin-top: 2rem;
+}
+section.card-details .right{
+    height: 300px;
+    background: url('/img/Background.jpg');
+    border-radius: 30px;
+}
+
+section.card-details .right h1{
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+    font-weight: 400;
+    color: white;
+}
+
+section.card-details .left{
+    border: 2px solid grey;
+    border-radius: 30px;
+    background: white;
+    margin: 0 auto;
+    margin-top: -219px;
+    padding: 10px;
+    width: 90%;
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+}
+
+.slider_wrapper{
+    overflow: hidden;
+}
+ 
+.slide{
+    margin-top: 2rem;
+}
+section.card-details .left .slider .slide div{
+    justify-content: center; 
+    display: flex;
+    
+}
+
+section.card-details .left .slider .slide img{
+    width: 100px;
+}
+
+
+section.card-details .left .features-details{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.card-details .left .features-details h1{
+    margin: 1.5rem;
+    font-weight: 400;
+}
+
+section.card-details .left .features-details h3{
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+section.card-details .left .features-details h3>span{
+    color: rgb(14, 224, 14);
+    margin-left: 1rem;
+}
+
+section.card-details .left .features-details p{
+    padding: 0 97px;
+    text-align: justify;
+}
+
+section.card-details .left .features-details a button{
+    margin-top: 1.5rem;
+    padding: 11px 42px;
+    background: black;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+section.features h1{
+    text-align: center;
+    margin: 1rem;
+    margin-top: 2rem;
+    font-weight: 400;
+}
+section.features{
+    margin-bottom: 2rem;
+}
+
+section.features .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+    border-radius: 30px;
+    border: 2px solid grey;
+    width: 90%;
+    margin: auto;
+}
+
+section.features .wrapper .card{
+    display: flex;
+    flex-direction: column;
+    margin:1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+section.features .wrapper .card img{
+    width: 129px;
+    border-radius: 50%;
+}
+
+section.features .wrapper .card span{
+    padding: 2px 50px;
+    font-size: 18px;
+}
+
+
+
+
+/* ============== Media Query ================= */
+@media (max-width: 1190px){
+    .navbar{
+        width: 90%;
+    }
+}
+
+@media (max-width:1041px){
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+        height: 49px;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color:#fff;
+        width: 100%;
+        transition: all .3s ease;
+    }
+    .navbar .right{
+        display: none;
+    }
+    .navbar .closeMenu{
+        display: none;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .navbar .openMenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+    .navbar .right{
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar .right ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar .right ul li{
+        margin-bottom: 45px;
+    }
+    .navbar .right ul li a {
+        font-size: 25px;
+    }
+    .features .wrapper{
+        flex-direction: column;
+    }
+
+    section.features .wrapper .card{
+        flex-direction: row;
+    }
+    
+}
+
+@media (max-width: 833px){
+
+}
